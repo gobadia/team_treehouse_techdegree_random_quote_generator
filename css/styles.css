@@ -1,4 +1,4 @@
-/** 
+/**
  * Treehouse FSJS Techdegree
  * Random Quote Generator - CSS
  */
@@ -137,10 +137,15 @@ h1 {
   }
 
   .container {
-    padding: 25px 25px 15px 55px;
+    padding: 25px 25px 200px 55px;
     background: rgba(0, 0, 0, 0.1);
     border-left: 5px solid rgba(0, 0, 0, 0.3);
     border-radius: 0 4px 4px 0;
+  }
+
+  .container img{
+    width: 300px;
+    float: right;
   }
 
   .quote {
