@@ -8,77 +8,77 @@ project 1 - A Random Quote Generator
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 /***
- * `quotes` array
+ * List of quotes from Letterkenney show characters
 ***/
 
 const quotes = [
   {quote: 'Oh, come on, kitten. I won’t tell anyone.',
-    character: 'Wayne'
+    source: 'Wayne'
   },
   {quote: 'Tim’s, McDonald’s, and the beer store are all closed on Christmas Day. And that’s your whole world right there',
-  character: 'Wayne'
+  source: 'Wayne'
   },
   {quote: 'You wish there was a pied piper for possums. But there isn’t, so you’re just gonna have to keep picking ‘em off with a .22.',
-  character: 'Wayne'
+  source: 'Wayne'
   },
   {quote: 'You knew your pal had come into money when he started throwing out perfectly good pistachios like he was above cracking ‘em open with a box cutter like the rest of us.',
-  character: 'Daryl'
+  source: 'Daryl'
   },
   {quote: 'Yeah. Oh, hey, look at you, ground',
-  character: 'Squirrelly Dan'
+  source: 'Squirrelly Dan'
   },
   {quote: 'If you have a problem with the majestic Canadian Goose, then you have a problem with me.',
-  character: 'Wayne'
+  source: 'Wayne'
   },
   {quote: 'Seeing as this is most certainly a one-off event and not a tradition that also falls on some made-up holiday that I couldn’t give a cats queef about, I’m out. There’s happiness calling my name from the bottom of a bottle of Puppers.',
-  character: 'Wayne'
+  source: 'Wayne'
   },
   {quote: 'Nice onesie. Does it come in men’s?',
-  character: 'Jonesy'
+  source: 'Jonesy'
   },
   {quote: '…I’m too fat to run.',
-  character: 'Squirrelly Dan'
+  source: 'Squirrelly Dan'
   },
   {quote: '…I’m too fat to run.',
-  character: 'Squirrelly Dan'
+  source: 'Squirrelly Dan'
   },
   {quote: 'You’d best be preparin’ for a Donny Brook if you think I’m going to that super soft birthday party of yours.',
-  character: 'Wayne'
+  source: 'Wayne'
   },
   {quote: 'We need backup, boys.',
-  character: 'Jonesy'
+  source: 'Jonesy'
   },
   {quote: 'Hard no.',
-  character: 'Wayne'
+  source: 'Wayne'
   },
   {quote: "Oh, c’mon, where’s your jam, bud?",
-  character: 'Reilly'
+  source: 'Reilly'
   },
   {quote: "Pitter-patter, let’s get at ‘er.'",
-  character: 'Everyone'
+  source: 'Everyone'
   },
   {quote: "Not my pig, not my farm.",
-  character: 'Wayne'
+  source: 'Wayne'
   },
   {quote: "Oh, get off the cross, we need the wood.",
-  character: 'Wayne'
+  source: 'Wayne'
   },
   {quote: "Where’s the sacrifice?",
-  character: 'Jonesy'
+  source: 'Jonesy'
   },
   {quote: "Let’s go easy over there, Squirrelly Dan.",
-  character: 'Wayne'
+  source: 'Wayne'
   },
   {quote: "And I suggest you let that one marinate.",
-  character: 'Wayne'
+  source: 'Wayne'
   },
   {quote: "You’re made of spare parts, aren’t you, bud?",
-  character: 'Wayne'
+  source: 'Wayne'
   }
 ];
 
 /***
- * `getRandomQuote` function
+ * `getRandomQuote` function to get a random quote from array of quotes
 ***/
 function getRandomQuote(quotes){
   let randomNumber = Math.floor(Math.random() * quotes.length);
@@ -88,7 +88,7 @@ function getRandomQuote(quotes){
 
 
 /***
- * `printQuote` function
+ * `printQuote` function to print the quote to the page
 ***/
 
 function printQuote(){
@@ -96,7 +96,7 @@ function printQuote(){
   console.log(randomQuote);
 
   let output = `<p class="quote">${randomQuote.quote}</p>
-    <p class="source">${randomQuote.character}</p>`;
+    <p class="source">${randomQuote.source}</p>`;
 
   document.querySelector('#quote-box').innerHTML= output;
 }
