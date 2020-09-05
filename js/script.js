@@ -8,7 +8,7 @@ project 1 - A Random Quote Generator
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 /***
- * List of quotes from Letterkenney show characters
+ * List of quotes from Letterkenny show characters
 ***/
 
 const quotes = [
@@ -77,6 +77,16 @@ const quotes = [
   }
 ];
 
+//Cast Image Links
+const images = [
+  Wayne: 'https://m.media-amazon.com/images/M/MV5BYTNjYThmNmUtNjZjMC00NThmLWIxN2ItM2RiNDgxYjQ4MmFiXkEyXkFqcGdeQXRodW1ibmFpbC1pbml0aWFsaXplcg@@._V1_UX477_CR0,0,477,268_AL_.jpg',
+  Jonesy: 'https://static.wikia.nocookie.net/letterkenny/images/b/bc/Jonesy4x1.jpg/revision/latest?cb=20181231233307',
+  Reilly: 'https://www.iheartradio.ca/image/policy:1.10028228:1569984058/image-jpg.jpg?f=default&$p$f=c6ab850',
+  'Squirrelly Dan': 'https://static.wikia.nocookie.net/letterkenny/images/a/a8/DanOpen5x1.jpg/revision/latest?cb=20190225184647',
+  Daryl: 'https://i.ytimg.com/vi/Ei6AtHXJ9dg/maxresdefault.jpg',
+  Everyone: 'https://cdn.vox-cdn.com/thumbor/lsBlfKl3g8okPHIq5Oz1WCABqCQ=/0x0:1280x800/1200x800/filters:focal(599x41:803x245)/cdn.vox-cdn.com/uploads/chorus_image/image/65450441/MV5BMDFjYTU5YjUtZDE5YS00NWZhLWE3ZWMtNDQ3NTkwYTk4MGZlXkEyXkFqcGdeQXVyMzYxMDk5ODA_._V1_.0.jpg'
+]
+
 /***
  * `getRandomQuote` function to get a random quote from array of quotes
 ***/
@@ -96,7 +106,8 @@ function printQuote(){
   console.log(randomQuote);
 
   let output = `<p class="quote">${randomQuote.quote}</p>
-    <p class="source">${randomQuote.source}</p>`;
+    <p class="source">${randomQuote.source}</p>
+    <img src= "${images[randomQuote.source]}" width ="200px">`;
 
   document.querySelector('#quote-box').innerHTML= output;
 }
